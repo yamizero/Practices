@@ -1,2 +1,2 @@
 # Practices
-记录练习
+记录练习的网站-->https://www.codewars.com
