@@ -5,4 +5,4 @@
 
 3. 数字滑动效果 --> [Odometer](http://github.hubspot.com/odometer/)
 
-4.[浅谈Log4j和Log4j2的区别](http://blog.csdn.net/fangaohua200/article/details/53561718)
+4. [浅谈Log4j和Log4j2的区别](http://blog.csdn.net/fangaohua200/article/details/53561718)
