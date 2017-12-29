@@ -1,0 +1,114 @@
+@mixin font-dpr($font-size)
+  font-size: $font-size
+  [data-dpr="2"] &
+    font-size: $font-size * 2
+  [data-dpr="3"] &
+    font-size: $font-size * 3  
+
+@media (-webkit-min-device-pixel-ratio: 1),(min-device-pixel-ratio: 1)
+  .hr
+    &:after 
+      transform: scaleY(1)
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)
+  .hr
+    &:after 
+      transform: scaleY(.75)
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2)
+  .hr
+    &:after 
+      transform: scaleY(.5)             
+/* 基本样式 */
+table,tr,th,td 
+    border: 1px solid #fcfcfc
+td
+  vertical-align: middle    
+.hr
+    position: relative
+    border: none
+    &:after
+        position: absolute
+        display: block
+        content: ''
+        left: 10%
+        right: 10%
+        bottom: 0
+        width: 80%
+        height: 1px
+        background: #f60
+        transform-origin: left bottom
+.color-ssr
+  background-color: #FF9900        
+.color-sr
+  background-color: #996699
+.color-r
+  background-color: #99CCFF 
+.color-n
+  background-color: #ccc   
+.shikigami-category ul
+  display: flex
+  justify-content: center
+  text-align: center
+  color: #fff
+  li
+    flex: 1
+    width: 1%
+    height: 40px
+    line-height: 40px
+    
+.shikigami-list
+  margin-bottom: 20px
+  ul
+    display: flex
+    flex-wrap: wrap
+    text-align: center
+    li
+      padding: 4px 0 
+      width: 20%
+      @include font-dpr(12px)
+
+.shikigami-wrap
+  margin-top: 20px
+  h1
+    padding: 4px 0
+    text-align: center
+    @include font-dpr(14px)
+  .shikigami-chapter  
+    .table-base
+      margin: 0 auto
+      width: 94%
+      text-align: center
+      caption
+        padding: 4px 0
+        text-align: center
+        @include font-dpr(14px)
+      tr
+        th
+          background-color: #d3d3d3
+          padding: 5px 0
+          color: #ffffff
+          font-weight: 600
+          &:nth-child(1)
+            width: 30%
+          &:nth-child(2)
+            width: 70%
+        td:nth-child(1)
+          background-color: #efefef
+          @include font-dpr(12px)
+          padding: 6px 0    
+      .shikigami-table    
+          display: flex
+          justify-content: flex-end
+          flex-wrap: wrap
+          border: none
+          text-align: center
+          p
+            flex-grow: 1
+            padding: 6px 0 
+            width: 30%
+            @include font-dpr(12px)
+            &:nth-child(odd)
+              background-color: #f0f1f1
+            &:nth-child(even)
+              background-color: #e5ebf2
+
+          

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Onmyoji</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <nav class="shikigami-category">
+        <ul>
+            <li class="color-ssr">SSR</li>
+            <li class="color-sr">SR</li>
+            <li class="color-r">R</li>
+            <li class="color-n">N</li>
+        </ul>
+    </nav>
+    <section class="shikigami-list">
+        <ul>
+            <li>讳莫如深</li>
+            <li>坚壁清野</li>
+            <li>食不果腹</li>
+            <li>望梅止渴</li>
+            <li>皮里阳秋</li>
+            <li>春秋笔法</li>
+        </ul>
+    </section>
+    <div class="hr"></div>
+    <section class="shikigami-wrap">
+        <h1>探索妖怪</h1>
+        <section id="app" class="shikigami-chapter">
+
+            <table class="table-base" v-for="item in shikigami">
+                <caption>{{item.title}}</caption>
+                <tr>
+                    <th>主怪</th>
+                    <th>副怪</th>
+                </tr>
+                <tr v-for="it in item.shikigami">
+                    <td v-for="t in it.major">{{ t.name }}</td>
+                    <td class="shikigami-table">
+                        <p v-for="i in it.minor">{{i.name}}</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </section>
+    <script src="jquery.min.js"></script>
+    <script src="vue.min.js"></script>
+    <script>
+        $(function () {
+            var Shikigami = {}
+            $.ajax({
+                url: 'data.json',
+                dataType: 'json',
+                success: function (data) {
+                    Shikigami.data = data;
+                    console.log(data.chapter);
+
+                    var app = new Vue({
+                        el: '#app',
+                        data: {
+                            shikigami: data.explore.chapter
+                        }
+                    })
+                }
+            })
+        })
+        var app = new Vue({
+            el: '#app1',
+            data: {
+                books: [{
+                    id: '1',
+                    author: '曹雪芹',
+                    name: '红楼梦',
+                    price: 32.0
+                }, {
+                    id: '2',
+                    author: '施耐庵',
+                    name: '水浒传',
+                    price: 30.0
+                }, {
+                    id: '3',
+                    author: '罗贯中',
+                    name: '三国演义',
+                    price: 24.0
+                }, {
+                    id: '4',
+                    author: '吴承恩',
+                    name: '西游记',
+                    price: 20.0
+                }]
+            }
+        })
+    </script>
+</body>
+
+</html>

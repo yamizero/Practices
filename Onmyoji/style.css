@@ -1,0 +1,198 @@
+@charset "UTF-8";
+@media (-webkit-min-device-pixel-ratio: 1), (min-device-pixel-ratio: 1) {
+  .hr:after {
+    transform: scaleY(1);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .hr:after {
+    transform: scaleY(0.75);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .hr:after {
+    transform: scaleY(0.5);
+  }
+}
+
+/* 基本样式 */
+table, tr, th, td {
+  border: 1px solid #fcfcfc;
+}
+
+td {
+  vertical-align: middle;
+}
+
+.hr {
+  position: relative;
+  border: none;
+}
+
+.hr:after {
+  position: absolute;
+  display: block;
+  content: '';
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+  width: 80%;
+  height: 1px;
+  background: #f60;
+  transform-origin: left bottom;
+}
+
+.color-ssr {
+  background-color: #FF9900;
+}
+
+.color-sr {
+  background-color: #996699;
+}
+
+.color-r {
+  background-color: #99CCFF;
+}
+
+.color-n {
+  background-color: #ccc;
+}
+
+.shikigami-category ul {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.shikigami-category ul li {
+  flex: 1;
+  width: 1%;
+  height: 40px;
+  line-height: 40px;
+}
+
+.shikigami-list {
+  margin-bottom: 20px;
+}
+
+.shikigami-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.shikigami-list ul li {
+  padding: 4px 0;
+  width: 20%;
+  font-size: 12px;
+}
+
+[data-dpr="2"] .shikigami-list ul li {
+  font-size: 24px;
+}
+
+[data-dpr="3"] .shikigami-list ul li {
+  font-size: 36px;
+}
+
+.shikigami-wrap {
+  margin-top: 20px;
+}
+
+.shikigami-wrap h1 {
+  padding: 4px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+[data-dpr="2"] .shikigami-wrap h1 {
+  font-size: 28px;
+}
+
+[data-dpr="3"] .shikigami-wrap h1 {
+  font-size: 42px;
+}
+
+.shikigami-wrap .shikigami-chapter .table-base {
+  margin: 0 auto;
+  width: 94%;
+  text-align: center;
+}
+
+.shikigami-wrap .shikigami-chapter .table-base caption {
+  padding: 4px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+[data-dpr="2"] .shikigami-wrap .shikigami-chapter .table-base caption {
+  font-size: 28px;
+}
+
+[data-dpr="3"] .shikigami-wrap .shikigami-chapter .table-base caption {
+  font-size: 42px;
+}
+
+.shikigami-wrap .shikigami-chapter .table-base tr th {
+  background-color: #d3d3d3;
+  padding: 5px 0;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.shikigami-wrap .shikigami-chapter .table-base tr th:nth-child(1) {
+  width: 30%;
+}
+
+.shikigami-wrap .shikigami-chapter .table-base tr th:nth-child(2) {
+  width: 70%;
+}
+
+.shikigami-wrap .shikigami-chapter .table-base tr td:nth-child(1) {
+  background-color: #efefef;
+  font-size: 12px;
+  padding: 6px 0;
+}
+
+[data-dpr="2"] .shikigami-wrap .shikigami-chapter .table-base tr td:nth-child(1) {
+  font-size: 24px;
+}
+
+[data-dpr="3"] .shikigami-wrap .shikigami-chapter .table-base tr td:nth-child(1) {
+  font-size: 36px;
+}
+
+.shikigami-wrap .shikigami-chapter .table-base .shikigami-table {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  border: none;
+  text-align: center;
+}
+
+.shikigami-wrap .shikigami-chapter .table-base .shikigami-table p {
+  flex-grow: 1;
+  padding: 6px 0;
+  width: 30%;
+  font-size: 12px;
+}
+
+[data-dpr="2"] .shikigami-wrap .shikigami-chapter .table-base .shikigami-table p {
+  font-size: 24px;
+}
+
+[data-dpr="3"] .shikigami-wrap .shikigami-chapter .table-base .shikigami-table p {
+  font-size: 36px;
+}
+
+.shikigami-wrap .shikigami-chapter .table-base .shikigami-table p:nth-child(odd) {
+  background-color: #f0f1f1;
+}
+
+.shikigami-wrap .shikigami-chapter .table-base .shikigami-table p:nth-child(even) {
+  background-color: #e5ebf2;
+}
+/*# sourceMappingURL=style.css.map */
