@@ -19,3 +19,5 @@
 
 ### 6. [VSCode插件sass Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass)
 
+### 7. [商城“智能”导航栏实践](https://segmentfault.com/a/1190000012633588?utm_source=ad_index)
+  > 在jd.com或者tmall.com等大型网站中，当鼠标在一级导航栏中垂直移动时，二级菜单可以无延迟的响应展示。神奇的是，当用户将鼠标悬浮在某一级菜单，想去点击对应的二级菜单区域时，即使这时鼠标掠过其他一级菜单，也并没有切换到其他二级菜单 --摘自上面的文章
